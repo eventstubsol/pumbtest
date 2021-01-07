@@ -1,0 +1,51 @@
+@import '../../resources/core';
+
+.chat-contact-listitem {
+
+    padding: 12px 0;
+    cursor:pointer;
+
+    .chat-contact-listitem-thum {
+        display:inline-block;
+        width:28px;
+        vertical-align:middle;
+        margin-right:8px;
+
+        img {
+            width:28px;
+            height:28px;
+            overflow: hidden;
+            display: inherit;
+        }
+    }
+
+    .chat-contact-listitem-name {
+        display:inline-block;
+        font-size: 15px;
+        vertical-align:middle;
+        width: 195px;
+        position:relative;
+        letter-spacing:-.1px;
+        line-height:22px;
+        @include semi-bold-text;
+    }
+
+    .chat-contact-listitem-name::before {
+        content:"";
+        display:block;
+        width:100%;
+        height:1px;
+        background-color: $light-border;
+        position:absolute;
+        left:0;
+        bottom:-18px;
+    }
+}
+
+.dark {
+    .chat-contact-listitem {
+        .chat-contact-listitem-name::before {
+            background-color:$dark-border;
+        }
+    }
+}

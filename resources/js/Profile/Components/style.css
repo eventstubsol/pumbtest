@@ -1,0 +1,98 @@
+/* Example Styles for React Tags*/
+div.ReactTags__tags {
+    position: relative;
+}
+
+/* Styles for the input */
+div.ReactTags__tagInput {
+    width: 100%;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 5px;
+}
+div.ReactTags__tagInput input.ReactTags__tagInputField,
+div.ReactTags__tagInput input.ReactTags__tagInputField:focus {
+    height: 31px;
+    margin: 0;
+    width: 100%;
+    font-size: 12px;
+    padding: .45rem .9rem;
+    border: 2px solid #ececec;
+}
+
+/* Styles for selected tags */
+div.ReactTags__selected span.ReactTags__tag {
+    border: 1px solid #dddddd42;
+    background: #f3f3f361;
+    font-size: 12px;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px 10px;
+    line-height: 1;
+    border-radius: 2px;
+}
+div.ReactTags__selected a.ReactTags__remove {
+    color: #aaa;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Styles for suggestions */
+div.ReactTags__suggestions {
+    position: absolute;
+}
+div.ReactTags__suggestions ul {
+    list-style-type: none;
+    box-shadow: .05em .01em .5em rgba(0,0,0,.2);
+    background: white;
+    width: 200px;
+}
+div.ReactTags__suggestions li {
+    border-bottom: 1px solid #ddd;
+    padding: 5px 10px;
+    margin: 0;
+}
+div.ReactTags__suggestions li mark {
+    text-decoration: underline;
+    background: none;
+    font-weight: 600;
+}
+div.ReactTags__suggestions ul li.ReactTags__activeSuggestion {
+    background: #b7cfe0;
+    cursor: pointer;
+}
+
+.custom-theme .custom-select{
+    border: 2px solid #ececec;
+}
+
+#profile-app .mdc-chip-set,#view-profile-modal .mdc-chip-set {
+    padding: 0;
+}
+
+#profile-app .mdc-chip-set .mdc-chip,#view-profile-modal .mdc-chip-set .mdc-chip{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1;
+    padding: 6px 15px;
+    height: auto;
+    background: #88c232;
+    color: #fff;
+    margin: 0 10px 10px 0;
+}
+
+#profile-app  .mdc-chip__checkmark-path,#view-profile-modal .mdc-chip__checkmark-path{
+    stroke: white;
+    stroke-width: 3px;
+}
+
+#profile-app .mdc-chip--selected .mdc-chip__checkmark-svg {
+    width: 18px;
+}
+
+#profile-app .mdc-chip.mdc-chip--selected .mdc-chip__checkmark, 
+#profile-app .mdc-chip .mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden) {
+    margin: -10px 4px 0px -4px;
+    height: 10px;
+}

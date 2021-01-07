@@ -1,0 +1,12 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Deploying on 142.93.75.171
+          script:
+            - pipe: atlassian/ssh-run:0.2.6
+              variables:
+                SSH_USER: "root"
+                SERVER: "142.93.75.171"
+                COMMAND: "/root/clone.sh"
+                MODE: "command"

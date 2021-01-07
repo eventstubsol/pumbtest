@@ -1,0 +1,55 @@
+@import '../../resources/core';
+
+
+.chat-ppl-listitem {
+    padding:13px 16px 0;
+    position:relative;
+    margin-top:-1px;
+    cursor:pointer;
+    display:flex;
+
+    .chat-ppl-thumbnail-wrap {
+        display:inline-block;
+        width:36px;
+        height:36px;
+        margin-right:7px;
+
+        img { 
+            width:24px;
+            position:absolute;
+            display:inline-block;
+
+            display:block;
+            overflow:hidden;
+            width:36px;
+        }
+    }
+
+    .chat-ppl-thumbnail-wrap.grp-chat-ppl-thumbnail-wrap { 
+        position:relative;
+    }
+
+    .chat-ppl-listitem-dtls {
+        display:inline-block;
+        flex:1 1 0;
+        padding-bottom:14px;
+        border-bottom:1px solid $light-background-border;
+
+        .chat-ppl-listitem-name {
+            font-size:15px;
+            font-weight:600;
+            letter-spacing:-.1px;
+            display:block;
+            max-width:147px;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+        }
+    }
+}
+
+.dark {
+    .chat-ppl-listitem-dtls {
+        border-bottom:1px solid $dark-background-border;
+    }
+} 

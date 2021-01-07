@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateAuditLogsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('audit_logs', function (Blueprint $table) {
+            $table->id();
+            $table->string("type")->index();
+            $table->uuid("user_id")->index();
+            $table->mediumText("label");
+            $table->longText("details");
+            $table->string("ip_address");
+            $table->string("user_agent");
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('audit_logs');
+    }
+}
