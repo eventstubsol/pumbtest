@@ -285,6 +285,18 @@ $user = Auth::user();
         });
     }
 
+    $(document).ready(function(){
+        setInterval(function(){
+            $.ajax({
+                url: "{{ route("confirmLogin") }}",
+                success: function(response){
+                      if(response && !response.loggedIn){
+                          window.location.reload();
+                      }
+                },
+            });
+        }, 5000);
+    });
 
     function initJs(){
         $('body').addClass('loaded');

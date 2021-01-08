@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Device;
 use App\Notification;
+use App\PushNotification;
 use App\User;
 use Http;
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class NotificationController extends Controller
 {
     public function index()
     {
-//        $notifications = Notification::orderBy("created_at")->get();
+       $notifications = PushNotification::orderBy("created_at")->get();
         $notifications = [];
         return view("notification.list")->with(compact("notifications"));
     }
@@ -37,14 +38,14 @@ class NotificationController extends Controller
 
 
         if ($resp->successful()) {
-//            Notification::create([
-//                "title" => $request->post("title"),
-//                "url" => $request->post("url", NULL),
-//                "message" => $request->post("message"),
-//                "roles" => implode(", ", $request->post("roles")),
-//            ]);
+           PushNotification::create([
+               "title" => $request->post("title"),
+               "url" => $request->post("url", NULL),
+               "message" => $request->post("message"),
+               "roles" => implode(", ", $request->post("roles")),
+           ]);
 
-            $notifications = Notification::orderBy("created_at")->get();
+            $notifications = PushNotification::orderBy("created_at")->get();
             return view("notification.list")->with(compact("notifications"));
         } else {
             return $resp->body();

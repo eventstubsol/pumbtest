@@ -51,7 +51,15 @@
         'host',
       ],
       success: function () {
-        $.i18n.reload(meetingConfig.lang);
+        ZoomMtg.i18n.reload(meetingConfig.lang);
+        console.log({
+          meetingNumber: meetingConfig.meetingNumber,
+          userName: meetingConfig.userName,
+          signature: signature,
+          apiKey: meetingConfig.apiKey,
+          userEmail: meetingConfig.userEmail,
+          passWord: meetingConfig.passWord,
+        })
         ZoomMtg.join({
           meetingNumber: meetingConfig.meetingNumber,
           userName: meetingConfig.userName,

@@ -2,8 +2,8 @@
 <head>
     <title>Zoom</title>
     <meta charset="utf-8" />
-    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.7.9/css/bootstrap.css" />
-    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.7.9/css/react-select.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.8.5/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.8.5/css/react-select.css" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <style>
@@ -26,14 +26,14 @@
     </style>
 </head>
 <body>
-<script src="https://source.zoom.us/1.7.9/lib/vendor/react.min.js"></script>
-<script src="https://source.zoom.us/1.7.9/lib/vendor/react-dom.min.js"></script>
-<script src="https://source.zoom.us/1.7.9/lib/vendor/redux.min.js"></script>
-<script src="https://source.zoom.us/1.7.9/lib/vendor/redux-thunk.min.js"></script>
-<script src="https://source.zoom.us/1.7.9/lib/vendor/jquery.min.js"></script>
-<script src="https://source.zoom.us/1.7.9/lib/vendor/lodash.min.js"></script>
-<script src="https://source.zoom.us/zoom-meeting-1.7.9.min.js"></script>
-<script src="{{ asset("js/zoom/tool.js") }}"></script>
-<script src="{{ asset("js/zoom/meeting.js") }}"></script>
+<script src="https://source.zoom.us/1.8.5/lib/vendor/react.min.js"></script>
+<script src="https://source.zoom.us/1.8.5/lib/vendor/react-dom.min.js"></script>
+<script src="https://source.zoom.us/1.8.5/lib/vendor/redux.min.js"></script>
+<script src="https://source.zoom.us/1.8.5/lib/vendor/redux-thunk.min.js"></script>
+<script src="https://source.zoom.us/1.8.5/lib/vendor/jquery.min.js"></script>
+<script src="https://source.zoom.us/1.8.5/lib/vendor/lodash.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-1.8.5.min.js"></script>
+<script src="{{ asset("js/zoom/tool.js") }}?cb=1"></script>
+<script src="{{ asset("js/zoom/meeting.js") }}?cb=1"></script>
 </body>
 </html>

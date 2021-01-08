@@ -83,6 +83,7 @@ class AttendeeAuthController extends Controller
             //         "login" => $this->loginT
             //     ]);
             // }
+            \DB::table("sessions")->where("user_id", $user->id)->whereNotIn("id", [session()->getId()])->delete();
             Auth::login($user);
             LoginLog::create(["ip" => $request->ip(), "user_id" => $user->id]);
             $pointsDetails = [

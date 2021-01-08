@@ -30,6 +30,7 @@ Route::get("privacy-policy", "HomeController@privacyPolicy")->name("privacyPolic
 Route::get("faq", "HomeController@faqs")->name("faq");
 Route::get("schedule", "EventSessionsController@schedule")->name("schedule");
 Route::get("/notifications/send", "NotificationController@send")->name("sendNotifications");
+Route::get("/confirm-login", "HomeController@confirmLogin")->name("confirmLogin");
 
 Route::middleware(["auth", "verified"])->group(function () { //All Routes here would need authentication to access
     Route::get("/home", "HomeController@dashboard");

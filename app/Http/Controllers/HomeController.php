@@ -41,4 +41,10 @@ class HomeController extends Controller
     public function privacyPolicy(){
         return view("event.tos");
     }
+
+    public function confirmLogin(){
+        return [
+            "loggedIn" => (bool) Auth::user()
+        ];
+    }
 }

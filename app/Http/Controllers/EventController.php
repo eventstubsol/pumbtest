@@ -470,9 +470,9 @@ class EventController extends Controller
                 return redirect(route("webinar", getZoomParameters($session->zoom_webinar_id, $session->zoom_password && strlen($session->zoom_password) ? $session->zoom_password : "")));
             }
             //Setup for first two days - To be removed later
-            //            if (strlen($session->zoom_webinar_id)) {
-            //                return redirect(route("webinar", getZoomParameters($session->zoom_webinar_id, $session->zoom_password && strlen($session->zoom_password) ? $session->zoom_password : "")));
-            //            }
+            if (strlen($session->zoom_webinar_id)) {
+                return redirect(route("webinar", getZoomParameters($session->zoom_webinar_id, $session->zoom_password && strlen($session->zoom_password) ? $session->zoom_password : "")));
+            }
             if ($videoId) {
                 return view("event.vimeoEmbed")->with(compact("videoId"));
             }
