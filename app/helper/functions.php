@@ -503,16 +503,16 @@ function getPastSessionVideos(){
 
 function isOpenForPublic($item){
 //     return true;
-    // "chat",
-    // "lounge",
-    // "photo-booth",
-    // "booths",
-    // "leaderboard",
-    // "delegates",
-    // "swagbag",
-    // "library"
-    $itemsLocked = [
-        "meet-and-greet",
+// "lounge",
+// "photo-booth",
+// "booths",
+// "leaderboard",
+// "delegates",
+// "swagbag",
+// "library"
+$itemsLocked = [
+    "meet-and-greet",
+    "chat"
 //        "caucus",
     ];
     return !in_array($item,$itemsLocked);
