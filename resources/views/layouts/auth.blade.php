@@ -82,7 +82,7 @@
                 }
                 
                 window.addEventListener("DOMContentLoaded", function(){
-                    (isMobile() || window.innerWidth < 480) ?  deviceElem.classList.remove('disabled') : deviceElem.classList.add('disabled'); 
+                    window.innerWidth < 600 ?  deviceElem.classList.remove('disabled') : deviceElem.classList.add('disabled'); 
                 }, false);
             })();
         </script>
