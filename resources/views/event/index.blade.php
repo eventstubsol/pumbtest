@@ -25,6 +25,43 @@ $user = Auth::user();
             alert("For an immersive experience on our platform please use some modern browser like Chrome, Safari or Firefox.");
         }
     </script>
+    <style>
+        body[data-sidebar-size="condensed"]:not([data-layout="compact"]){
+            height:100vh !important;
+            overflow:hidden !important;
+            padding: 0 !important;
+        }
+        .theme-modal .close {
+            position: absolute;
+            right: 7px !important;
+            top: 3px !important;
+            font-weight: 600 !important;
+            z-index: 10 !important;
+        }
+        .no-padding{
+            padding: 0 !important;
+        }
+        .theme-modal .modal-body{
+            padding:0;
+        }
+        .theme-modal #audi-content {
+            background: #ffffff;
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.56%;
+        }
+        .theme-modal #audi-content iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width:100%;
+            width: 100%;
+            height: 100%;
+            max-width:100%;
+            object-fit: contain;
+        }
+    </style>
     <!-- Onesignal -->
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
