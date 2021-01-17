@@ -175,31 +175,34 @@ Route::middleware(["auth", "verified"])->group(function () { //All Routes here w
     Route::get("/updates/check", "EventController@contentTicker")->name("contentTicker");
 });
 
-Route::get("/refresh-online-users-status", function(){
+Route::get("/refresh-online-users-status", function () {
     $loginLastTime = Carbon::now()->subtract(ONLINE_KEEPING_TIME, "seconds");
     $a = \App\User::where("updated_at", ">=", $loginLastTime)->count();
     $minToShowOnline = 2500;
     $q = \App\User::where("updated_at", "<=", $loginLastTime);
     $users = $q->orderBy("email")->limit($minToShowOnline - $a)->select("id")->get();
-    foreach ($users as $user){
+    foreach ($users as $user) {
         $user->touch();
     }
     $a = \App\User::where("updated_at", ">=", $loginLastTime)->count();
     return $a;
 });
 
-Route::get("/delete-users", function(){
-//    $user = \App\User::create([
-//        "name" => "Admin",
-//        "email" => "dev@fitsmea.com",
-//        "type" => "admin",
-//        "password" => Hash::make("chintan"),
-//    ]);
+Route::get("/delete-users", function () {
+    //    $user = \App\User::create([
+    //        "name" => "Admin",
+    //        "email" => "dev@fitsmea.com",
+    //        "type" => "admin",
+    //        "password" => Hash::make("chintan"),
+    //    ]);
     $user = \App\User::find("420f7f67-e4d2-4316-9071-e2ad5c805900");
     $user->markEmailAsVerified();
     $user->update([
         "type" => "cms_manager",
     ]);
-//    User::find(3)
+    //    User::find(3)
     return \App\User::all();
 });
+
+
+Route::get('lv-logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

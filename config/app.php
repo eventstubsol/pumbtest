@@ -167,6 +167,7 @@ return [
          */
         Sichikawa\LaravelSendgridDriver\SendgridTransportServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
         /*
          * Application Service Providers...
          */
